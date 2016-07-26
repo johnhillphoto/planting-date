@@ -1,11 +1,89 @@
+body {
+    /*background: url("./images/Planting-Date-Calculator.png") no-repeat;
+    background-size: 100% auto;*/
+    background-color: white;
+}
+#logo  {
+  width: 60%;
+  margin:0 auto;
+}
+img{
+  display:block;
+  margin:auto;
+}
+h5{
+  margin: 4px;
+}
 #daysDisplay {
   font-style: normal;
   font-weight: bold;
   border:none;
+  text-align: center;
+  width:100%;
 }
 #c1 {
- background-color: #6bc7cc;
+ /*background-color: #6bc7cc;*/
+ text-align: center;
 }
 #c2 {
-  background-color : tan;
+  border-style: solid;
+  border-width: 1px 0px 1px 0px;
+  /*width:30%;*/
 }
+#c3 {
+  /*background-color : yellow;*/
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  /*width:30%;*/
+}
+#c4 {
+  text-align: center;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  /*width:30%;*/
+
+}
+md-datepicker {
+    position: relative;
+
+    .md-datepicker-input-container{
+      margin-left: 0;
+    }
+    .md-datepicker-button.md-icon-button {
+      margin-right: 0;
+    }
+  }
+  .datepicker-container{
+    width:100%;
+  text-align:center;
+}
+.datepicker-center{
+  display:inline-block;
+  margin:0 auto;
+}
+/*@media only screen and (min-width: 985px) {
+  body {
+      background-size: 986px auto;
+      background-position: center top;
+  }
+    }*/
+  /*@media only screen and (max-width: 600px) {
+    md-datepicker {
+        left: 0%;
+      }
+  }
+  @media only screen and (max-width: 894px) {
+    md-datepicker {
+        left: 5%;
+      }
+  }
+  @media only screen and (min-width: 1300px) {
+    md-datepicker {
+        left: 25%;
+      }
+  }
+  @media only screen and (min-width: 1450px) {
+    md-datepicker {
+        left: 30%;
+      }
+  }*/

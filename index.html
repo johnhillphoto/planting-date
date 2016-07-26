@@ -8,18 +8,50 @@
 </head>
 
 <body ng-app="DateApp">
-  <div ng-controller="dateCtrl">
-  <div layout="row" style="height:100%;width:30%">
-    <div layout="column" flex>
+  <div id="overall" ng-controller="dateCtrl">
+  <div layout="row" layout-align="center center" style="width:100%">
+    <div layout="column" layout-align="center center" flex >
+      <div flex="10">
+        <img id="logo" src="./browser/images/Planting-Date-Calculator-Logo.png">
+      </div>
+    </div>
+  </div>
 
-      <div flex="20" id="c1"> Planting Date Calculator </div>
-      <div flex="20" id="c2"> <md-datepicker ng-model="startDate" md-placeholder="Enter start date"></md-datepicker> </div>
-      <div flex="20" id="c3"> <md-datepicker ng-model="endDate" md-placeholder="Enter end date"></md-datepicker> </div>
-      <div flex="20" id="c4">
+  <div layout="row" style="height:100%">
+    <div layout="column" layout-align="center end" flex >
+      <div flex="30" class="">Hello </div>
+    </div>
+    <div layout="column" layout-align="center center" flex >
+
+      <!-- <div flex="10" id="c1" class=""></div> -->
+      <div flex="20" id="c2" class="">
+        <div class="datepicker-container">
+          <div class="datepicker-center">
+            <h5>Choose Planting Day</h5>
+            <md-datepicker ng-model="startDate" md-placeholder="Enter start date"></md-datepicker>
+        </div>
+        </div>
+      </div>
+      <div flex="20" id="c3" class="">
+        <div class="datepicker-container">
+          <div class="datepicker-center">
+            <h5>Choose Harvest Day</h5>
+            <md-datepicker ng-model="endDate" md-placeholder="Enter end date"></md-datepicker>
+        </div>
+        </div>
+      </div>
+      <div flex="20" id="c4" class="">
+        <h5>Days To Maturity</h5>
         <input type="text" class="form-control" id="daysDisplay" name="days" data-ng-model="days" required="" placeholder="{{days}}" ng-keyup="$event.keyCode == 13 && enterFunction()"/>
       </div>
 
     </div>
+
+    <div layout="column" layout-align="center start" flex >
+      <div flex="30" class="">Hello </div>
+    </div>
+
+
   </div>
 </div>
   <!--
