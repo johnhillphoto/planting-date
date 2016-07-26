@@ -2,6 +2,7 @@
 
 DateApp.controller('dateCtrl', function($scope){
   console.log('in controller');
+  $scope.animateClass = "";
   var today = new Date().toDateString();
   $scope.startDate = new Date(today);
   $scope.endDate = new Date(today);
@@ -16,9 +17,8 @@ DateApp.controller('dateCtrl', function($scope){
 
     var diff =  Math.abs(end-start);
     var diffCalc = ((((diff/1000)/60)/60)/24);
-    // console.log('diffCalc', diffCalc);
-    // diffCalc = Math.abs(diffCalc);
     $scope.days = diffCalc;
+    // $scope.animateClass = "usePulse";
   };
 
   $scope.$watch('endDate', function(){
@@ -33,20 +33,12 @@ DateApp.controller('dateCtrl', function($scope){
     var moreDays = Number($scope.days);
     end.setDate(end.getDate() + moreDays);
     $scope.endDate = new Date(end);
+    $scope.animateClass = "usePulse";
 
   };
   $scope.showEnterButton = function(){
     $scope.showButton = true;
   };
-
-
-  //  var futureDay = new Date(+start);
-  //  futureDay.setDate(futureDay.getDate() + daysIntoFuture);
-  //   console.log('futureDay',futureDay.toDateString('MM/dd/yyyy'));
-
-
-
-
 
 
 });//end controller

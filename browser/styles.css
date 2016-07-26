@@ -141,29 +141,22 @@ md-datepicker {
   .md-datepicker-input  {
     font-size: 1.8em;
 }
-/*@media only screen and (min-width: 985px) {
-  body {
-      background-size: 986px auto;
-      background-position: center top;
-  }
-    }*/
-  /*@media only screen and (max-width: 600px) {
-    md-datepicker {
-        left: 0%;
-      }
-  }
-  @media only screen and (max-width: 894px) {
-    md-datepicker {
-        left: 5%;
-      }
-  }
-  @media only screen and (min-width: 1300px) {
-    md-datepicker {
-        left: 25%;
-      }
-  }
-  @media only screen and (min-width: 1450px) {
-    md-datepicker {
-        left: 30%;
-      }
-  }*/
+@-webkit-keyframes pulse {
+  from {
+    background-color: white; }
+  to {
+    background-color: rgba(51, 122, 183, 0.5); } }
+
+@keyframes pulse {
+  0% {
+    background-color: white; }
+  50% {
+    background-color: rgba(51, 122, 183, 0.5); }
+  100% {
+    background-color: white; } }
+
+.usePulse {
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; }
