@@ -17,14 +17,16 @@
     </div>
   </div>
 
-  <div layout="row" style="height:100%">
-    <div layout="column" layout-align="center end" flex >
-      <div flex="30" class="">Hello </div>
+  <div layout="row" layout-align="start start"style="height:100%">
+    <div layout="column" layout-align="start end" flex class="veggies">
+      <div flex="25" ><img id="vegA" class="vegImage" src="./browser/images/a.png"> </div>
+      <div flex="25" ><img id="vegB" class="vegImage" src="./browser/images/b.png"> </div>
+      <div flex="25" ><img id="vegC" class="vegImage" src="./browser/images/c.png"> </div>
     </div>
     <div layout="column" layout-align="center center" flex >
 
       <!-- <div flex="10" id="c1" class=""></div> -->
-      <div flex="20" id="c2" class="">
+      <div flex="20" id="c2" class="box">
         <div class="datepicker-container">
           <div class="datepicker-center">
             <h5>Choose Planting Day</h5>
@@ -32,7 +34,7 @@
         </div>
         </div>
       </div>
-      <div flex="20" id="c3" class="">
+      <div flex="20" id="c3" class="box">
         <div class="datepicker-container">
           <div class="datepicker-center">
             <h5>Choose Harvest Day</h5>
@@ -40,47 +42,36 @@
         </div>
         </div>
       </div>
-      <div flex="20" id="c4" class="">
-        <h5>Days To Maturity</h5>
-        <input type="text" class="form-control" id="daysDisplay" name="days" data-ng-model="days" required="" placeholder="{{days}}" ng-keyup="$event.keyCode == 13 && enterFunction()"/>
+      <div flex="20" id="c4" class="box">
+        <h5>Choose Days To Maturity</h5>
+        <input type="text" class="form-control" id="daysDisplay" name="days" data-ng-model="days" required="" placeholder="{{days}}" ng-keyup="$event.keyCode == 13 && enterFunction()" ng-focus="showEnterButton()"/>
+        <br>
+        <md-button ng-click="enterFunction()" ng-show="showButton" class="md-raised">Calculate</md-button>
+      </div>
+      <div flex="20" id="c5" >
+        <div layout="row" layout-align="center center" style="width:100%" id="bottomVeggies">
+
+          <div flex="25" ><img class="vegImageBottom" src="./browser/images/b.png"> </div>
+          <div flex="25" ><img  class="vegImageBottom" src="./browser/images/a.png"> </div>
+          <div flex="25" ><img  class="vegImageBottom" src="./browser/images/d.png"> </div>
+
+        </div>
       </div>
 
     </div>
 
-    <div layout="column" layout-align="center start" flex >
-      <div flex="30" class="">Hello </div>
+    <div layout="column" layout-align="start start" flex class="veggies">
+      <div flex="25" ><img id="vegA" class="vegImageRight" src="./browser/images/d.png"> </div>
+      <div flex="25" ><img id="vegB" class="vegImageRight" src="./browser/images/e.png"> </div>
+      <div flex="25" ><img id="vegC" class="vegImageRight" src="./browser/images/f.png"> </div>
     </div>
 
 
   </div>
-</div>
-  <!--
-    Your HTML content here
-  -->
-  <!-- <div ng-controller="dateCtrl">
-  <div layout="row">
+  <!-- end main row -->
 
-  <div layout="column" flex>
-    <div flex>
-      Planting Date Calculator
-    </div>
-    <div flex>
-      <md-datepicker ng-model="startDate" md-placeholder="Enter start date"></md-datepicker>
-    </div>
-    <div flex>
-      <md-datepicker ng-model="endDate" md-placeholder="Enter end date"></md-datepicker>
-    </div>
-    <div>
-      <input type="text" class="form-control" id="daysDisplay" name="days" data-ng-model="days" required="" placeholder="{{days}}" ng-keyup="$event.keyCode == 13 && enterFunction()"/>
-    </div>
 
 </div>
-
-  </div>
-  </div> -->
-
-
-
 
 
   <!-- Angular Material requires Angular.js Libraries -->

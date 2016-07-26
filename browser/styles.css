@@ -1,7 +1,13 @@
 body {
     /*background: url("./images/Planting-Date-Calculator.png") no-repeat;
     background-size: 100% auto;*/
-    background-color: white;
+    background-color: #3367cd;
+}
+#overall  {
+  padding-top: 10px;
+}
+#bottomVeggies  {
+  display: none
 }
 #logo  {
   width: 60%;
@@ -11,6 +17,18 @@ img{
   display:block;
   margin:auto;
 }
+.vegImage {
+  display:block;
+  width: 60%;
+  height:auto;
+  margin-right: 0;
+}
+.vegImageRight {
+  display:block;
+  width: 60%;
+  height:auto;
+  margin-left: 0;
+}
 h5{
   margin: 4px;
 }
@@ -19,29 +37,35 @@ h5{
   font-weight: bold;
   border:none;
   text-align: center;
-  width:100%;
+  width:25%;
+  font-size: 2em
 }
 #c1 {
- /*background-color: #6bc7cc;*/
+ background-color: #c4d3f2;
  text-align: center;
 }
 #c2 {
-  border-style: solid;
-  border-width: 1px 0px 1px 0px;
+  background-color: #c4d3f2;
+  margin-top: 30px;
   /*width:30%;*/
 }
 #c3 {
   /*background-color : yellow;*/
-  border-style: solid;
-  border-width: 1px 1px 1px 1px;
   /*width:30%;*/
 }
 #c4 {
   text-align: center;
-  border-style: solid;
-  border-width: 1px 1px 1px 1px;
   /*width:30%;*/
+}
+.box  {
+  width:85%;
+  margin-bottom: 15px;
+  background-color: #c4d3f2;
 
+}
+md-icon {
+  width:28px;
+  height: 28px
 }
 md-datepicker {
     position: relative;
@@ -60,6 +84,62 @@ md-datepicker {
 .datepicker-center{
   display:inline-block;
   margin:0 auto;
+}
+
+.vegImageBottom {
+  display:block;
+  width: 80%;
+  height:auto;
+  margin-top: 0;
+}
+
+@media only screen and (min-width: 960px) {
+  #logo  {
+    width: 70%;
+    margin:0 auto;
+  }
+  .md-datepicker-input  {
+    font-size: 1.8em;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .md-datepicker-input  {
+    font-size: .7em;
+  }
+
+}
+@media only screen and (min-width: 600px) {
+  .md-datepicker-input  {
+    font-size: .7em;
+  }
+  .box  {
+    width:100%;
+  }
+}
+@media only screen and (max-width: 599px) {
+  #logo  {
+    width: 100%;
+    margin:0 auto;
+  }
+  .veggies {
+      display: none
+    }
+    #bottomVeggies  {
+      display:flex;
+    }
+  h5  {
+    font-size: 1.2em;
+  }
+  .md-datepicker-input  {
+    font-size: 1.2em;
+  }
+  #c2 {
+    margin-top: 0px;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .md-datepicker-input  {
+    font-size: 1.8em;
 }
 /*@media only screen and (min-width: 985px) {
   body {

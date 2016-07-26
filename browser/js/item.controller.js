@@ -33,6 +33,10 @@ DateApp.controller('dateCtrl', function($scope){
     var moreDays = Number($scope.days);
     end.setDate(end.getDate() + moreDays);
     $scope.endDate = new Date(end);
+
+  };
+  $scope.showEnterButton = function(){
+    $scope.showButton = true;
   };
 
 
