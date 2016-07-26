@@ -1,0 +1,69 @@
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+  <link rel="stylesheet" href="browser/styles.css">
+
+</head>
+
+<body ng-app="DateApp">
+  <div ng-controller="dateCtrl">
+  <div layout="row" style="height:100%;width:30%">
+    <div layout="column" flex>
+
+      <div flex="20" id="c1"> Planting Date Calculator </div>
+      <div flex="20" id="c2"> <md-datepicker ng-model="startDate" md-placeholder="Enter start date"></md-datepicker> </div>
+      <div flex="20" id="c3"> <md-datepicker ng-model="endDate" md-placeholder="Enter end date"></md-datepicker> </div>
+      <div flex="20" id="c4">
+        <input type="text" class="form-control" id="daysDisplay" name="days" data-ng-model="days" required="" placeholder="{{days}}" ng-keyup="$event.keyCode == 13 && enterFunction()"/>
+      </div>
+
+    </div>
+  </div>
+</div>
+  <!--
+    Your HTML content here
+  -->
+  <!-- <div ng-controller="dateCtrl">
+  <div layout="row">
+
+  <div layout="column" flex>
+    <div flex>
+      Planting Date Calculator
+    </div>
+    <div flex>
+      <md-datepicker ng-model="startDate" md-placeholder="Enter start date"></md-datepicker>
+    </div>
+    <div flex>
+      <md-datepicker ng-model="endDate" md-placeholder="Enter end date"></md-datepicker>
+    </div>
+    <div>
+      <input type="text" class="form-control" id="daysDisplay" name="days" data-ng-model="days" required="" placeholder="{{days}}" ng-keyup="$event.keyCode == 13 && enterFunction()"/>
+    </div>
+
+</div>
+
+  </div>
+  </div> -->
+
+
+
+
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+  <script src="browser/js/module.js"></script>
+  <script src="browser/js/item.controller.js"></script>
+
+
+
+
+</body>
+</html>

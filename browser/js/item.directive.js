@@ -1,4 +1,4 @@
-alphaApp.directive('itemDirective', function(){
+dateApp.directive('itemDirective', function(){
   return {
     templateUrl: 'browser/views/items.html',
     controller: 'ItemCtrl'

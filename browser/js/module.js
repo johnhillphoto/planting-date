@@ -1,3 +1,4 @@
 'use strict';
 
-var alphaApp = angular.module('alphaApp', ['ui.router']);
+var DateApp = angular.module('DateApp', ['ngMaterial']);
+console.log('inside here');

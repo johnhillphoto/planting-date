@@ -1,4 +1,4 @@
-alphaApp.factory('itemFactory', function($http, $log){
+dateApp.factory('itemFactory', function($http, $log){
   var itemFactory ={}
 
     itemFactory.getAll = function(){
@@ -22,6 +22,5 @@ alphaApp.factory('itemFactory', function($http, $log){
       }).catch($log.error);
     };//end getIndex
 
-    // itemFactory.alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
   return itemFactory;
 });//end factory
