@@ -2,15 +2,13 @@
   "name": "Planting-Date-Tracker",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {},
   "author": "John Hill",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.3",
     "angular-animate": "^1.5.8",
-    "angular-touch": "^1.5.8",
-    "bootstrap": "^3.3.6",
-    "bootstrap-css": "^3.0.0"
+    "angular-touch": "^1.5.8"
   }
 }
