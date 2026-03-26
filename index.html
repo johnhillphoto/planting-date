@@ -1,87 +1,64 @@
-<html lang="en" >
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Angular Material style sheet -->
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+  <meta name="description" content="Planting Date Calculator — calculate days to maturity and harvest dates for your garden.">
+  <title>Planting Date Calculator</title>
   <link rel="stylesheet" href="browser/styles.css">
-
 </head>
 
-<body ng-app="DateApp">
-  <div id="overall" ng-controller="dateCtrl">
-  <div layout="row" layout-align="center center" style="width:100%">
-    <div layout="column" layout-align="center center" flex >
-      <div flex="10">
-        <img id="logo" src="./browser/images/Planting-Date-Calculator-Logo.png">
+<body>
+  <div id="overall">
+
+    <header>
+      <img id="logo" src="./browser/images/Planting-Date-Calculator-Logo.png" alt="Planting Date Calculator Logo">
+    </header>
+
+    <main>
+      <!-- Left veggie column (hidden on small screens) -->
+      <div class="veggies veggies-left" aria-hidden="true">
+        <img class="vegImage" src="./browser/images/a.png" alt="">
+        <img class="vegImage" src="./browser/images/b.png" alt="">
+        <img class="vegImage" src="./browser/images/c.png" alt="">
       </div>
-    </div>
+
+      <!-- Center controls -->
+      <div id="controls">
+        <div id="c2" class="box">
+          <label for="startDate">Choose Planting Day</label>
+          <input type="date" id="startDate" name="startDate">
+        </div>
+
+        <div id="c3" class="box">
+          <label for="endDate">Choose Harvest Day</label>
+          <input type="date" id="endDate" name="endDate">
+        </div>
+
+        <div id="c4" class="box">
+          <label for="daysDisplay">Days To Maturity</label>
+          <input type="number" id="daysDisplay" name="days" min="0" placeholder="0">
+          <button id="calcBtn" type="button">Calculate Harvest Date</button>
+        </div>
+
+        <!-- Bottom veggies (shown on small screens only) -->
+        <div id="bottomVeggies" aria-hidden="true">
+          <img class="vegImageBottom" src="./browser/images/b.png" alt="">
+          <img class="vegImageBottom" src="./browser/images/a.png" alt="">
+          <img class="vegImageBottom" src="./browser/images/d.png" alt="">
+        </div>
+      </div>
+
+      <!-- Right veggie column (hidden on small screens) -->
+      <div class="veggies veggies-right" aria-hidden="true">
+        <img class="vegImageRight" src="./browser/images/d.png" alt="">
+        <img class="vegImageRight" src="./browser/images/e.png" alt="">
+        <img class="vegImageRight" src="./browser/images/f.png" alt="">
+      </div>
+    </main>
+
   </div>
 
-  <div layout="row" layout-align="start start"style="height:100%">
-    <div layout="column" layout-align="start end" flex class="veggies">
-      <div flex="25" ><img id="vegA" class="vegImage" src="./browser/images/a.png"> </div>
-      <div flex="25" ><img id="vegB" class="vegImage" src="./browser/images/b.png"> </div>
-      <div flex="25" ><img id="vegC" class="vegImage" src="./browser/images/c.png"> </div>
-    </div>
-    <div layout="column" layout-align="center center" flex >
-
-      <div flex="20" id="c2" class="box">
-        <div class="datepicker-container">
-          <div class="datepicker-center">
-            <h5>Choose Planting Day</h5>
-            <md-datepicker ng-model="startDate" md-placeholder="Enter start date"></md-datepicker>
-        </div>
-        </div>
-      </div>
-      <div flex="20" id="c3" class="box">
-        <div class="datepicker-container">
-          <div class="datepicker-center">
-            <h5>Choose Harvest Day</h5>
-            <md-datepicker ng-model="endDate" md-placeholder="Enter end date"></md-datepicker>
-        </div>
-        </div>
-      </div>
-      <div flex="20" id="c4" class="box">
-        <h5>Choose Days To Maturity</h5>
-        <input type="text" class="form-control" id="daysDisplay" name="days" data-ng-model="days" required="" placeholder="{{days}}" ng-keyup="$event.keyCode == 13 && enterFunction()" ng-focus="showEnterButton()" ng-class="animateClass"/>
-        <br>
-        <md-button ng-click="enterFunction()" ng-show="showButton" class="md-raised">Calculate</md-button>
-      </div>
-      <div flex="20" id="c5" >
-        <div layout="row" layout-align="center center" style="width:100%" id="bottomVeggies">
-
-          <div flex="25" ><img class="vegImageBottom" src="./browser/images/b.png"> </div>
-          <div flex="25" ><img  class="vegImageBottom" src="./browser/images/a.png"> </div>
-          <div flex="25" ><img  class="vegImageBottom" src="./browser/images/d.png"> </div>
-
-        </div>
-      </div>
-
-    </div>
-
-    <div layout="column" layout-align="start start" flex class="veggies">
-      <div flex="25" ><img id="vegA" class="vegImageRight" src="./browser/images/d.png"> </div>
-      <div flex="25" ><img id="vegB" class="vegImageRight" src="./browser/images/e.png"> </div>
-      <div flex="25" ><img id="vegC" class="vegImageRight" src="./browser/images/f.png"> </div>
-    </div>
-
-
-  </div>
-  <!-- end main row -->
-
-
-</div>
-
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
-  <script src="browser/js/module.js"></script>
-  <script src="browser/js/item.controller.js"></script>
-
-
-
-
+  <script src="browser/js/app.js"></script>
 </body>
 </html>
