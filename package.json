@@ -1,14 +1,9 @@
 {
-  "name": "Planting-Date-Tracker",
-  "version": "1.0.0",
-  "description": "",
+  "name": "planting-date-calculator",
+  "version": "2.0.0",
+  "description": "A static planting date calculator built with plain HTML, CSS, and native JavaScript — no dependencies.",
   "main": "index.html",
   "scripts": {},
   "author": "John Hill",
-  "license": "ISC",
-  "dependencies": {
-    "angular": "^1.5.3",
-    "angular-animate": "^1.5.8",
-    "angular-touch": "^1.5.8"
-  }
+  "license": "ISC"
 }
